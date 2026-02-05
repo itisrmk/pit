@@ -1,0 +1,77 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pit"
+version = "0.1.0"
+description = "PIT - Prompt Information Tracker: Semantic version control for LLM prompts"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+    { name = "Rahul Kashyap" }
+]
+keywords = ["prompt", "version-control", "llm", "ai", "pit", "tracker"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Version Control",
+]
+dependencies = [
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "sqlalchemy>=2.0.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "jinja2>=3.0.0",
+    "pyyaml>=6.0.0",
+    "httpx>=0.25.0",
+    "scipy>=1.10.0",
+]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.18.0"]
+openai = ["openai>=1.0.0"]
+ollama = ["httpx>=0.25.0"]
+all-llm = [
+    "anthropic>=0.18.0",
+    "openai>=1.0.0",
+    "httpx>=0.25.0",
+]
+server = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0",
+]
+stats = ["scipy>=1.10.0"]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-asyncio>=0.21.0",
+    "ruff>=0.1.0",
+]
+all = [
+    "pit[all-llm,server,stats,dev]",
+]
+
+[project.scripts]
+pit = "pit.cli.main:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pit"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
