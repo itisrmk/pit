@@ -4,7 +4,7 @@
 
 **Project:** PIT (Prompt Information Tracker) - formerly PIT (Prompt Information Tracker)  
 **Tech Stack:** Python 3.11+, Typer, SQLAlchemy, Pydantic, Rich  
-**Package Name:** `pit` (was `pit`)  
+**Package Name:** `prompt-pit` (was `pit`)  
 **CLI Command:** `pit` (was `pit`)
 
 ## Rules

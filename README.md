@@ -83,20 +83,20 @@ PIT is a **semantic version control system** designed specifically for managing 
 ### Installation
 
 ```bash
-pip install pit
+pip install prompt-pit
 ```
 
 Or with optional LLM provider support:
 
 ```bash
 # With Anthropic Claude support
-pip install pit[anthropic]
+pip install prompt-pit[anthropic]
 
 # With OpenAI support  
-pip install pit[openai]
+pip install prompt-pit[openai]
 
 # With everything
-pip install pit[all]
+pip install prompt-pit[all]
 ```
 
 ### Initialize a Project

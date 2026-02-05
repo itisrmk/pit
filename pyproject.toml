@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "pit"
+name = "prompt-pit"
 version = "0.1.0"
 description = "PIT - Prompt Information Tracker: Semantic version control for LLM prompts"
 readme = "README.md"
@@ -55,7 +55,7 @@ dev = [
     "ruff>=0.1.0",
 ]
 all = [
-    "pit[all-llm,server,stats,dev]",
+    "prompt-pit[all-llm,server,stats,dev]",
 ]
 
 [project.scripts]
