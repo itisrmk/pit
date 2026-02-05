@@ -1,0 +1,69 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { 
+    background: #0d1117; 
+    color: #c9d1d9; 
+    font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+    font-size: 14px;
+    padding: 20px;
+    line-height: 1.5;
+}
+.banner { 
+    color: #58a6ff; 
+    text-align: center;
+    margin-bottom: 20px;
+    white-space: pre;
+    font-size: 16px;
+}
+.table {
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.table-title {
+    background: #161b22;
+    color: #3fb950;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+.table-row {
+    display: flex;
+    border-bottom: 1px solid #21262d;
+}
+.table-row:last-child { border-bottom: none; }
+.table-cell { padding: 6px 12px; }
+.table-cell.cmd { color: #58a6ff; min-width: 150px; }
+.table-cell.desc { color: #c9d1d9; }
+.tip {
+    border: 1px solid #238636;
+    border-radius: 6px;
+    padding: 10px;
+    color: #7ee787;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<div style="color: #7ee787; margin-bottom: 10px;">$ pit list</div>
+
+<div class="table">
+    <div class="table-title">Prompts</div>
+    <div class="table-row" style="background: #161b22; font-weight: bold;">
+        <div class="table-cell" style="flex:1">Name</div>
+        <div class="table-cell" style="width:80px">Version</div>
+        <div class="table-cell" style="flex:2">Description</div>
+        <div class="table-cell" style="width:120px; color: #8b949e;">Updated</div>
+    </div>
+    <div class="table-row"><div class="table-cell" style="flex:1; color: #58a6ff;">customer-support</div><div class="table-cell" style="width:80px;">v12</div><div class="table-cell" style="flex:2;">AI assistant for customer support</div><div class="table-cell" style="width:120px; color: #8b949e;">2 hours ago</div></div>
+    <div class="table-row"><div class="table-cell" style="flex:1; color: #58a6ff;">summarizer</div><div class="table-cell" style="width:80px;">v5</div><div class="table-cell" style="flex:2;">Text summarization prompt</div><div class="table-cell" style="width:120px; color: #8b949e;">1 day ago</div></div>
+    <div class="table-row"><div class="table-cell" style="flex:1; color: #58a6ff;">code-review</div><div class="table-cell" style="width:80px;">v3</div><div class="table-cell" style="flex:2;">PR review assistant</div><div class="table-cell" style="width:120px; color: #8b949e;">3 days ago</div></div>
+</div>
+
+<div style="color: #8b949e; margin-top: 20px;">3 prompts tracked. Use 'pit add <file>' to add more.</div>
+</body></html>

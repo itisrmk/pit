@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { 
+    background: #0d1117; 
+    color: #c9d1d9; 
+    font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+    font-size: 14px;
+    padding: 20px;
+    line-height: 1.5;
+}
+.banner { 
+    color: #58a6ff; 
+    text-align: center;
+    margin-bottom: 20px;
+    white-space: pre;
+    font-size: 16px;
+}
+.table {
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.table-title {
+    background: #161b22;
+    color: #3fb950;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+.table-row {
+    display: flex;
+    border-bottom: 1px solid #21262d;
+}
+.table-row:last-child { border-bottom: none; }
+.table-cell { padding: 6px 12px; }
+.table-cell.cmd { color: #58a6ff; min-width: 150px; }
+.table-cell.desc { color: #c9d1d9; }
+.tip {
+    border: 1px solid #238636;
+    border-radius: 6px;
+    padding: 10px;
+    color: #7ee787;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="banner">╔═══╗ ╔═══╗ ╔═══════╗
+║ P ║ ║ I ║ ║   T   ║
+╚═══╝ ╚═══╝ ╚═══════╝
+    Prompt Information Tracker
+
+Semantic versioning for the AI age 🤖</div>
+
+<div class="table">
+    <div class="table-title">Quick Actions</div>
+    <div class="table-row"><div class="table-cell cmd">pit init</div><div class="table-cell desc">Initialize a new PIT project</div></div>
+    <div class="table-row"><div class="table-cell cmd">pit add &lt;file&gt;</div><div class="table-cell desc">Add a new prompt to track</div></div>
+    <div class="table-row"><div class="table-cell cmd">pit list</div><div class="table-cell desc">List all tracked prompts</div></div>
+    <div class="table-row"><div class="table-cell cmd">pit commit &lt;prompt&gt;</div><div class="table-cell desc">Save a new version</div></div>
+    <div class="table-row"><div class="table-cell cmd">pit log &lt;prompt&gt;</div><div class="table-cell desc">View version history</div></div>
+    <div class="table-row"><div class="table-cell cmd">pit diff &lt;prompt&gt;</div><div class="table-cell desc">Compare versions</div></div>
+</div>
+
+<div class="tip">💡 Tip: Run 'pit replay' to test inputs across all versions</div>
+</body></html>
