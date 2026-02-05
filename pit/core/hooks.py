@@ -162,8 +162,8 @@ class HookManager:
 
         # Prepare environment
         run_env = os.environ.copy()
-        run_env["PROMPTVC_HOOK"] = hook_type.value
-        run_env["PROMPTVC_PROJECT_ROOT"] = str(self.project_root)
+        run_env["PIT_HOOK"] = hook_type.value
+        run_env["PIT_PROJECT_ROOT"] = str(self.project_root)
 
         if env_vars:
             for key, value in env_vars.items():
@@ -218,12 +218,12 @@ class HookManager:
 # Environment variables:
 #   PROMPT_NAME - name of the prompt being committed
 #   VERSION_NUMBER - version number being created
-#   PROMPTVC_PROJECT_ROOT - project root directory
+#   PIT_PROJECT_ROOT - project root directory
 
 echo "Validating prompt: $PROMPT_NAME"
 
 # Example: Check for forbidden words
-# if grep -qi "forbidden" "$PROMPTVC_PROJECT_ROOT/prompts/$PROMPT_NAME.txt"; then
+# if grep -qi "forbidden" "$PIT_PROJECT_ROOT/prompts/$PROMPT_NAME.txt"; then
 #     echo "Error: Prompt contains forbidden words"
 #     exit 1
 # fi
@@ -235,7 +235,7 @@ exit 0
 # Environment variables:
 #   PROMPT_NAME - name of the prompt
 #   VERSION_NUMBER - version number created
-#   PROMPTVC_PROJECT_ROOT - project root directory
+#   PIT_PROJECT_ROOT - project root directory
 
 echo "Committed $PROMPT_NAME v$VERSION_NUMBER"
 
@@ -249,12 +249,12 @@ exit 0
 # Environment variables:
 #   PROMPT_NAME - name of the prompt
 #   TARGET_VERSION - version being checked out
-#   PROMPTVC_PROJECT_ROOT - project root directory
+#   PIT_PROJECT_ROOT - project root directory
 
 echo "Checking out $PROMPT_NAME v$TARGET_VERSION"
 
 # Example: Check for uncommitted changes
-# if [ -f "$PROMPTVC_PROJECT_ROOT/.pit/uncommitted/$PROMPT_NAME" ]; then
+# if [ -f "$PIT_PROJECT_ROOT/.pit/uncommitted/$PROMPT_NAME" ]; then
 #     echo "Warning: Uncommitted changes exist"
 #     exit 1
 # fi
@@ -266,7 +266,7 @@ exit 0
 # Environment variables:
 #   PROMPT_NAME - name of the prompt
 #   CHECKED_OUT_VERSION - version that was checked out
-#   PROMPTVC_PROJECT_ROOT - project root directory
+#   PIT_PROJECT_ROOT - project root directory
 
 echo "Checked out $PROMPT_NAME v$CHECKED_OUT_VERSION"
 
@@ -282,7 +282,7 @@ exit 0
 #   TARGET_PROMPT - target prompt name
 #   SOURCE_VERSION - source version
 #   TARGET_VERSION - target version
-#   PROMPTVC_PROJECT_ROOT - project root directory
+#   PIT_PROJECT_ROOT - project root directory
 
 echo "Merging $SOURCE_PROMPT v$SOURCE_VERSION into $TARGET_PROMPT v$TARGET_VERSION"
 
@@ -297,7 +297,7 @@ exit 0
 #   SOURCE_PROMPT - source prompt name
 #   TARGET_PROMPT - target prompt name
 #   MERGED_VERSION - new merged version
-#   PROMPTVC_PROJECT_ROOT - project root directory
+#   PIT_PROJECT_ROOT - project root directory
 
 echo "Merged into $TARGET_PROMPT v$MERGED_VERSION"
 
