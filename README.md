@@ -1,16 +1,6 @@
 # 🕳️ PIT (Prompt Information Tracker)
 
-```
-╔═══════════════════════════════════════════╗
-║                                           ║
-║     🕳️  P I T                            ║
-║                                           ║
-║     Prompt Information Tracker           ║
-║                                           ║
-║     "Where prompts go to evolve"         ║
-║                                           ║
-╚═══════════════════════════════════════════╝
-```
+![PIT Banner](assets/banner.png)
 
 > **Git for Prompts** — Version control that actually understands your LLM prompts
 
