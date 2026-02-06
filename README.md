@@ -75,6 +75,24 @@ PIT is a **semantic version control system** designed specifically for managing 
 ### 📊 Analytics Dashboard
 ![PIT Stats Command](assets/screenshot-stats.png)
 
+### 🌐 Streamlit Web Dashboard
+PIT now includes a beautiful web-based dashboard for visualizing prompt data:
+
+```bash
+# Launch the Streamlit dashboard
+streamlit run pit-dashboard.py
+```
+
+Features:
+- 📈 **Visual Timeline** — Track version metrics over time
+- 🔍 **Side-by-Side Diff** — Compare prompt versions
+- 📊 **Metrics Dashboard** — Success rate, latency charts
+- 🧪 **Interactive Replay** — Test inputs across versions
+- 🔬 **A/B Test Results** — View experiment results
+
+![Dashboard Timeline](assets/dashboard/02-timeline.png)
+![Dashboard Diff View](assets/dashboard/03-diff.png)
+
 ---
 
 ## 🚀 Quick Start

@@ -1,0 +1,144 @@
+PIT Twitter Thread - Copy & Paste Each Tweet
+============================================
+
+TWEET 1 (Hook):
+---------------
+We built "git for prompts"
+
+Not because we wanted to.
+Because managing 50+ LLM prompt versions in Google Docs was breaking our production AI.
+
+Introducing PIT (Prompt Information Tracker) 🕳️
+
+pip install prompt-pit
+
+Here's what 332 tests and 10 features taught us 🧵
+
+---
+
+TWEET 2:
+--------
+1/ Prompt Bisect 🔍
+
+Your AI started giving weird answers. Which version broke it?
+
+pit bisect start --failing-input "why is the sky blue?"
+pit bisect good v1
+pit bisect bad v50
+
+Binary search finds the culprit. Minutes, not hours.
+
+---
+
+TWEET 3:
+--------
+2/ Time-Travel Replay ⏰
+
+Same input. 50 versions. Instant comparison.
+
+pit replay run my-prompt --input "Hello" --all
+
+See exactly how your prompt's behavior evolved. No more "it worked yesterday" mysteries.
+
+---
+
+TWEET 4:
+--------
+3/ Shareable Patches 📦
+
+Your teammate improved a prompt. You want that improvement.
+
+pit patch create prompt v1 v2 --output fix.patch
+pit patch apply fix.patch --to my-prompt
+
+Like git patches, but for prompt semantics. Distribute improvements like code.
+
+---
+
+TWEET 5:
+--------
+4/ Query Language 🔎
+
+Find versions that actually matter:
+
+pit log --where "success_rate > 0.9"
+pit log --where "content contains 'be concise' AND tags contains production"
+
+Query by behavior. Not just metadata.
+
+---
+
+TWEET 6:
+--------
+5/ Git-Style Hooks ⚙️
+
+Prevent bad prompts from reaching production:
+
+pit hooks install pre-commit
+# Scans for security issues before every commit
+
+CI/CD for prompts. Finally.
+
+---
+
+TWEET 7:
+--------
+6/ Dependencies 📎
+
+Your prompts depend on other prompts. Track it:
+
+pit deps add shared github org/repo/prompts --version v1.0
+pit deps install
+
+Like npm for prompts. Version-lock your dependencies.
+
+---
+
+TWEET 8:
+--------
+The full list:
+
+• Bisect (find broken versions)
+• Replay (time-travel inputs)
+• Patches (share changes)
+• Hooks (CI/CD for prompts)
+• Bundles (package & share)
+• Query language (search by behavior)
+• Dependencies (prompt packages)
+• Worktrees (multiple contexts)
+• Stash (WIP with context)
+• Semantic merge (smart conflicts)
+
+All open source. 332 tests.
+
+---
+
+TWEET 9 (CTA):
+--------------
+PIT is free. Open source. Production-ready.
+
+pip install prompt-pit
+
+If you manage LLM prompts, this saves you hours every week.
+
+Plus it has ASCII art banners 🎨
+
+⭐ Star it: github.com/itisrmk/pit
+👇 What's your biggest prompt management pain?
+
+---
+
+TWEET 10 (Hashtags - Reply to your thread):
+-------------------------------------------
+#LLM #AI #MachineLearning #OpenSource #DeveloperTools #PromptEngineering #MLOps #GitForPrompts
+
+---
+
+HOW TO POST:
+1. Copy Tweet 1, paste into Twitter, post
+2. Click "Reply" on your own tweet
+3. Paste Tweet 2, post
+4. Continue for Tweets 3-9
+5. Reply to the thread with Tweet 10 (hashtags)
+
+Go viral! 🚀
